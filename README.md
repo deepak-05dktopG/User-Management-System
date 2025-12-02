@@ -133,6 +133,52 @@ db.users.updateOne(
 - Email: admin@example.com
 - Password: (your chosen password or admin123)
 
+## ER Diagram
+
+```mermaid
+erDiagram
+    USER {
+        ObjectId _id PK
+        String name
+        String email UK
+        String phone UK
+        String password
+        String address
+        String state
+        String city
+        String country
+        String pincode
+        String profile_image
+        String role
+        String refreshToken
+        Date createdAt
+        Date updatedAt
+    }
+```
+
+
+## Troubleshooting
+
+### MongoDB Connection Issues
+- Ensure MongoDB is running
+- Check MONGODB_URI in .env file
+- Verify network connectivity
+
+### CORS Errors
+- Verify CLIENT_URL in backend .env
+- Check CORS configuration in server.js
+
+### File Upload Issues
+- Ensure uploads directory exists and has write permissions
+- Check file size (max 2MB)
+- Verify file type (JPG/PNG only)
+
+### Token Issues
+- Clear browser localStorage
+- Check JWT secrets are set in .env
+- Verify token expiry settings
+
+
 <h2>📬 Contact</h2>
 
 <ul>
